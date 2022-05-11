@@ -1,0 +1,62 @@
+<h1>Add Your Pet</h1>
+
+  <div class="container" [formGroup]="addForm">
+    <form>
+    <div class="row">
+      <div class="col-25">
+        <label for="title">Type</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="type" name="type" placeholder="Dog" formControlName="type">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="state">State</label>
+      </div>
+      <div class="col-75">
+        <select formControlName="state">
+          <option *ngFor="let state of states" value="{{state}}">  {{state}}  </option> 
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Duncan" formControlName="name" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="age">Age</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="age" name="age" placeholder="6" formControlName="age" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="image">Image URL</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="image" name="image" placeholder="image.jpeg" formControlName="imageUrl" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="status">Status</label>
+      </div>
+      <div class="col-75">
+        <select formControlName="status">
+          <option *ngFor="let status of statuses" value="{{status}}">  {{status}}  </option> 
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <button (click)="submitForm()" [routerLink]="['/']">Submit</button>
+    </div>
+    </form>
+  </div>
+  

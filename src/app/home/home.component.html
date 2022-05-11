@@ -1,0 +1,22 @@
+<div class="filters">
+<form [formGroup]="filterForm">
+<div class="filter">
+  <p>Filter by state:</p>
+    <select formControlName="state">
+      <option *ngFor="let state of states" value="{{state}}">  {{state}}  </option> 
+    </select>
+    <button (click)="filterState()">Filter</button>
+</div>
+<div class="filter">
+  <p>Filter by status:</p>
+    <select formControlName="status">
+      <option *ngFor="let status of statuses" value="{{status}}">  {{status}}  </option> 
+    </select>
+    <button (click)="filterStatus()">Filter</button>
+</div>
+</form>
+<button class="showAll" (click)="showAll()">Show All</button>
+</div>
+<app-pet-card class="pet-cards" [pet]="pet" *ngFor="let pet of pets; let i = index"></app-pet-card>
+
+

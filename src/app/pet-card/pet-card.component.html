@@ -1,0 +1,9 @@
+<div class="pet-card" >
+    <a routerLink="/pet/{{ pet._id }}">
+    <h3 class="type-card">{{ pet.name }}</h3>
+    <img [src]="pet.imageUrl" alt="pet picture">
+    <p class="state-card">{{ pet.state }}</p>
+    <p class="status-card">{{ pet.status }}</p>
+    </a>
+</div>
+ 

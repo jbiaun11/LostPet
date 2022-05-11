@@ -1,0 +1,35 @@
+.pet-card {
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(12, 13, 71);
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(12, 13, 71);
+    text-align: center;
+    background-color: #f2f2f2;
+    transition: transform .2s;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    letter-spacing: 3px;
+}
+
+.pet-card:hover {
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(12, 13, 71);
+}
+
+.status-card {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+img {
+    height: 150px;
+}
